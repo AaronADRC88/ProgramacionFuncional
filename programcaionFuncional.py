@@ -55,7 +55,21 @@ lista4 = filter(e_par, lista)
 for elemento in lista4:
     print(elemento)
 
-lista5=filter(lambda n:n%2.0==0,lista)
+lista5 = filter(lambda n: n % 2.0 == 0, lista)
 
 for elemento in lista5:
+    print(elemento)
+
+lista6 = [n ** 2 for n in lista]
+for elemento in lista6:
+    print(elemento)
+
+lista7 = [n for n in lista if n % 2 == 0]
+for elemento in lista7:
+    print(elemento)
+
+"""para maiores de 18"""
+edad={"a":18,"b":19,"c":20,"d":15,"e":14}
+Medad=[n for n in edad if edad[n]>=18]
+for elemento in Medad:
     print(elemento)
