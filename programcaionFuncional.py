@@ -69,7 +69,18 @@ for elemento in lista7:
     print(elemento)
 
 """para maiores de 18"""
-edad={"a":18,"b":19,"c":20,"d":15,"e":14}
-Medad=[n for n in edad if edad[n]>=18]
+edad = {"a": 18, "b": 19, "c": 20, "d": 15, "e": 14}
+Medad = [n for n in edad if edad[n] >= 18]
 for elemento in Medad:
-    print(elemento)
+    print(elemento + " maior de edade")
+
+edadeT = [("a", 15), ("b", 18), ("c", 20)]
+
+
+def maior_edade(elemento):
+    return elemento[1] >= 18
+
+
+MedadT = filter(maior_edade, edadeT)
+for elemento in MedadT:
+    print(str(elemento) + " maior de edade")
