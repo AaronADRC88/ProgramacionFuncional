@@ -84,3 +84,36 @@ def maior_edade(elemento):
 MedadT = filter(maior_edade, edadeT)
 for elemento in MedadT:
     print(str(elemento) + " maior de edade")
+
+l=[0,1,2,3]
+m=['a','b']
+n=[]
+for s in m:
+    for v in l:
+        if v>0:
+            n.append(v*s)
+
+for z in n:
+    print(z)
+"""outra forma de declarar o dobre for anidado"""
+n=[s*v for s in m
+       for v in l
+        if v>0]
+for z in n:
+    print(z)
+
+"""xeradores coma o for de java"""
+
+xerador=(n**2 for n in l)
+print(xerador)
+
+for n in xerador:
+    print(n)
+
+def meu_xerador (n,m,s):
+    while(n<=m):
+        yield n
+        n+=s
+
+for n in meu_xerador(5,20,1):
+    print(n)
